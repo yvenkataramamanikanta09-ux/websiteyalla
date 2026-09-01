@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portfolio content",
+  "type": "object",
+  "required": ["site", "profile", "contact", "resume", "labels", "sectionOrder", "sectionVisibility", "skills", "education", "experience", "projects", "certifications"],
+  "properties": {
+    "site": { "type": "object", "required": ["title", "description", "language", "themeColor"], "additionalProperties": true },
+    "profile": { "type": "object", "required": ["name", "headline", "introduction", "biography"], "additionalProperties": true },
+    "contact": { "type": "object", "required": ["email", "links"], "additionalProperties": true },
+    "resume": { "type": "object", "required": ["file", "label", "visible"], "additionalProperties": true },
+    "labels": { "type": "object" },
+    "sectionOrder": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "sectionVisibility": { "type": "object" },
+    "skills": { "type": "array" },
+    "education": { "type": "array" },
+    "experience": { "type": "array" },
+    "projects": { "type": "array" },
+    "certifications": { "type": "array" }
+  }
+}

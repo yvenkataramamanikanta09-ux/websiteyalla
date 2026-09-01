@@ -1,0 +1,90 @@
+{
+  "$schema": "./portfolio.schema.json",
+  "site": {
+    "title": "Sample Portfolio",
+    "description": "A sample JSON-driven personal portfolio. Replace all sample content before publishing.",
+    "url": "",
+    "language": "en",
+    "themeColor": "#ea580c",
+    "defaultTheme": "system"
+  },
+  "profile": {
+    "name": "Your Name",
+    "headline": "Your professional headline",
+    "introduction": "This is sample content. Replace it with a concise introduction in content/portfolio.json.",
+    "biography": "Describe the work you do, the problems you enjoy solving, and what makes your approach distinctive.",
+    "location": "Your location",
+    "availability": "Open to relevant opportunities",
+    "photo": "assets/images/profile-placeholder.svg",
+    "photoAlt": "Sample profile placeholder illustration"
+  },
+  "contact": {
+    "email": "",
+    "links": [
+      { "id": "github", "label": "GitHub", "url": "", "visible": false },
+      { "id": "linkedin", "label": "LinkedIn", "url": "", "visible": false }
+    ]
+  },
+  "resume": { "file": "", "label": "Résumé", "visible": false },
+  "labels": {
+    "navLabel": "Primary navigation",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Selected work",
+    "certifications": "Certifications",
+    "contact": "Let’s connect",
+    "searchProjects": "Search projects",
+    "allCategories": "All categories",
+    "viewDetails": "View details",
+    "view": "View",
+    "download": "Download",
+    "verify": "Verify credential"
+  },
+  "sectionOrder": ["about", "skills", "experience", "education", "projects", "certifications", "contact"],
+  "sectionVisibility": {
+    "about": true,
+    "skills": true,
+    "experience": false,
+    "education": true,
+    "projects": true,
+    "certifications": true,
+    "contact": true
+  },
+  "skills": [
+    { "id": "frontend", "category": "Frontend", "items": ["HTML", "CSS", "JavaScript"], "order": 1, "visible": true },
+    { "id": "workflow", "category": "Workflow", "items": ["Git", "Accessibility", "Responsive design"], "order": 2, "visible": true }
+  ],
+  "experience": [],
+  "education": [
+    { "id": "sample-education", "institution": "Sample institution", "qualification": "Replace with your education", "startDate": "", "endDate": "", "details": "Sample content — delete or replace before publishing.", "order": 1, "visible": true }
+  ],
+  "projects": [
+    {
+      "id": "sample-project",
+      "title": "Sample project",
+      "summary": "A clearly labeled example showing how project cards and details are rendered.",
+      "description": "Replace this record with evidence from a real project. The interface is generated entirely from this JSON object.",
+      "problem": "Explain the real user or business problem.",
+      "approach": "Explain your decisions, constraints, and process.",
+      "features": ["JSON-driven content", "Accessible project dialog", "Responsive layout"],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "contribution": "State your personal contribution honestly.",
+      "outcome": "Sample only — do not claim outcomes you cannot support.",
+      "thumbnail": "assets/images/project-placeholder.svg",
+      "thumbnailAlt": "Abstract orange sample project placeholder",
+      "screenshots": [],
+      "repositoryUrl": "",
+      "demoUrl": "",
+      "reportFile": "",
+      "category": "Web",
+      "tags": ["sample", "portfolio"],
+      "date": "2026-01",
+      "featured": true,
+      "order": 1,
+      "visible": true
+    }
+  ],
+  "certifications": []
+}
