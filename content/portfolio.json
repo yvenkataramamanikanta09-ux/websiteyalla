@@ -1,16 +1,16 @@
 {
   "$schema": "./portfolio.schema.json",
   "site": {
-    "title": "Sample Portfolio",
-    "description": "A sample JSON-driven personal portfolio. Replace all sample content before publishing.",
+    "title": "Yalla Dhattatreya | AI Engineer",
+    "description": "Portfolio of Yalla Dhattatreya, AI Engineer.",
     "url": "",
     "language": "en",
     "themeColor": "#c63318",
     "defaultTheme": "system"
   },
   "profile": {
-    "name": "Your Name",
-    "headline": "Your professional headline",
+    "name": "Yalla Dhattatreya",
+    "headline": "AI Engineer",
     "introduction": "This is sample content. Replace it with a concise introduction in content/portfolio.json.",
     "biography": "Describe the work you do, the problems you enjoy solving, and what makes your approach distinctive.",
     "location": "Your location",
