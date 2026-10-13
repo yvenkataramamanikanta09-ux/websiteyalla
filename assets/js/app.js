@@ -41,6 +41,20 @@
     ]);
   }
   function simpleCards(items, title, body) { return el('div', { className: 'grid' }, sortedVisible(items).map(item => el('article', { className: 'card' }, [el('h3', { text: title(item) }), el('p', { className: 'muted', text: body(item) }), item.details ? el('p', { text: item.details }) : null]))); }
+  function aboutSection(data) {
+    const profile = data.profile;
+    const details = [
+      [data.labels.languages || 'Languages', profile.languages],
+      [data.labels.interests || 'Beyond work', profile.interests]
+    ].filter(([, items]) => items?.length).map(([title, items]) => el('div', {}, [
+      el('h3', { text: title }), el('p', { text: items.join(' · ') })
+    ]));
+    return section('about', data.labels.about, [
+      el('p', { text: profile.biography }),
+      profile.location ? el('p', { className: 'muted', text: profile.location }) : null,
+      details.length ? el('div', { className: 'about-details' }, details) : null
+    ]);
+  }
   function showProject(project, labels) {
     const content = document.querySelector('#dialog-content'); content.replaceChildren();
     content.append(el('h2', { id: 'dialog-title', text: project.title }), el('p', { text: project.description }));
@@ -64,14 +78,25 @@
     return section('projects', data.labels.projects, [el('div',{className:'filters'},[el('label',{},[el('span',{text:data.labels.searchProjects}),search]),el('label',{},[el('span',{text:'Category'}),select])]),grid,empty]);
   }
   function certificationsSection(data) {
-    const cards=sortedVisible(data.certifications).map(c=>el('article',{className:'card'},[c.thumbnail?el('img',{src:c.thumbnail,alt:c.thumbnailAlt||'',loading:'lazy'}):null,el('h3',{text:c.title}),el('p',{className:'muted',text:[c.issuer,c.issueDate,c.expiryDate?`Expires ${c.expiryDate}`:''].filter(Boolean).join(' · ')}),c.credentialId?el('p',{text:`Credential ID: ${c.credentialId}`}):null,tags(c.skills||[]),el('div',{className:'card-actions'},[link(data.labels.view,c.certificateFile),link(data.labels.download,c.certificateFile,'button secondary',true),link(data.labels.verify,c.verificationUrl)])]));
+    const cards = sortedVisible(data.certifications).map(c => {
+      const metadata = [c.issuer, c.issueDate, c.expiryDate ? `Expires ${c.expiryDate}` : ''].filter(Boolean).join(' · ');
+      const actions = [link(data.labels.view, c.certificateFile), link(data.labels.download, c.certificateFile, 'button secondary', true), link(data.labels.verify, c.verificationUrl)].filter(Boolean);
+      return el('article', { className: 'card' }, [
+        c.thumbnail ? el('img', { src: c.thumbnail, alt: c.thumbnailAlt || '', loading: 'lazy' }) : null,
+        el('h3', { text: c.title }),
+        metadata ? el('p', { className: 'muted', text: metadata }) : null,
+        c.credentialId ? el('p', { text: `Credential ID: ${c.credentialId}` }) : null,
+        c.skills?.length ? tags(c.skills) : null,
+        actions.length ? el('div', { className: 'card-actions' }, actions) : null
+      ]);
+    });
     return section('certifications',data.labels.certifications,cards.length?[el('div',{className:'grid'},cards)]:[el('p',{className:'empty',text:'No public certifications are listed yet.'})]);
   }
   function contactSection(data) { const items=[]; if(data.contact.email) items.push(link('Email me',`mailto:${data.contact.email}`)); for(const x of sortedVisible(data.contact.links)) if(x.url) items.push(link(x.label,x.url,'button secondary')); return section('contact',data.labels.contact,[el('p',{text:items.length?'Choose the channel that works best for you.':'Add public contact links in content/portfolio.json when you are ready.'}),el('div',{className:'actions'},items)]); }
   function render(data) {
     document.querySelector('#brand').textContent=data.profile.name; nav.setAttribute('aria-label',data.labels.navLabel);
     document.querySelector('#footer-copy').textContent=`© ${new Date().getFullYear()} ${data.profile.name}.`;
-    const renderers={about:()=>section('about',data.labels.about,[el('p',{text:data.profile.biography}),data.profile.location?el('p',{className:'muted',text:data.profile.location}):null]),skills:()=>section('skills',data.labels.skills,[el('div',{className:'grid'},sortedVisible(data.skills).map(s=>el('article',{className:'card'},[el('h3',{text:s.category}),el('ul',{className:'skill-list'},s.items.map(item=>el('li',{text:item})))])))]),experience:()=>section('experience',data.labels.experience,[simpleCards(data.experience,x=>x.role,x=>[x.organization,x.startDate&&x.endDate?`${x.startDate}–${x.endDate}`:''].filter(Boolean).join(' · '))]),education:()=>section('education',data.labels.education,[simpleCards(data.education,x=>x.qualification,x=>[x.institution,x.startDate&&x.endDate?`${x.startDate}–${x.endDate}`:''].filter(Boolean).join(' · '))]),projects:()=>projectsSection(data),certifications:()=>certificationsSection(data),contact:()=>contactSection(data)};
+    const renderers={about:()=>aboutSection(data),skills:()=>section('skills',data.labels.skills,[el('div',{className:'grid'},sortedVisible(data.skills).map(s=>el('article',{className:'card'},[el('h3',{text:s.category}),el('ul',{className:'skill-list'},s.items.map(item=>el('li',{text:item})))])))]),experience:()=>section('experience',data.labels.experience,[simpleCards(data.experience,x=>x.role,x=>[x.organization,x.startDate&&x.endDate?`${x.startDate}–${x.endDate}`:''].filter(Boolean).join(' · '))]),education:()=>section('education',data.labels.education,[simpleCards(data.education,x=>x.qualification,x=>[x.institution,x.startDate&&x.endDate?`${x.startDate}–${x.endDate}`:''].filter(Boolean).join(' · '))]),projects:()=>projectsSection(data),certifications:()=>certificationsSection(data),contact:()=>contactSection(data)};
     const optional={skills:data.skills,experience:data.experience,education:data.education,projects:data.projects,certifications:data.certifications};
     const ids=data.sectionOrder.filter(id=>data.sectionVisibility[id]&&renderers[id]&&(!optional[id]||sortedVisible(optional[id]).length)); app.replaceChildren(renderHero(data),...ids.map(id=>renderers[id]())); navList.replaceChildren(...ids.map(id=>el('li',{},[el('a',{href:`#${id}`,text:data.labels[id]||id})])));
   }

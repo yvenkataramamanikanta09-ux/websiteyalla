@@ -1,11 +1,13 @@
 # JSON-driven personal portfolio
 
-A lightweight, accessible portfolio built with HTML, CSS, and JavaScript. **All editable portfolio content lives in [`content/portfolio.json`](content/portfolio.json).** The project entries are based on the supplied résumé; the profile and education still contain clearly labeled sample text.
+A lightweight, accessible portfolio built with HTML, CSS, and JavaScript. **All editable portfolio content lives in [`content/portfolio.json`](content/portfolio.json).** The profile, education, skills, projects, certifications, languages, and interests are based on the supplied résumé. The name and AI Engineer headline follow the owner's requested wording.
+
+Only LinkedIn is published as a contact channel. The email address, phone number, postal code, and original résumé PDF are not included in the public site. Certificate issuers, dates, and verification links remain unspecified because they were not provided.
 
 ## First-time setup
 
 1. Install Node.js 20 or newer.
-2. Review the project descriptions and replace the remaining sample profile and education values in `content/portfolio.json` with approved public information.
+2. Review `content/portfolio.json` and keep its information current using approved public details.
 3. Put public files in the matching folders:
    - images: `assets/images/`
    - résumés: `assets/documents/resumes/`
@@ -43,7 +45,7 @@ Changing an **uncommitted local file does not change the public website**. GitHu
 
 Set `resume.visible` to `true` and `resume.file` to a public local PDF path to show résumé access. Locally hosted document links get separate preview and download controls. Browsers may preview, download, or open a file in a new tab depending on the file type and user settings; the `download` attribute is a request, not an absolute guarantee.
 
-Certificate records support `certificateFile` and `verificationUrl`. Empty values never create broken actions.
+Certificate records support `certificateFile` and `verificationUrl`. Issuer and issue date are optional; leave them empty or omitted when unknown. Empty metadata and actions are not rendered, and titles alone do not imply externally verified credentials.
 
 ## Validation and build
 

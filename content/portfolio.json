@@ -2,8 +2,8 @@
   "$schema": "./portfolio.schema.json",
   "site": {
     "title": "Yalla Dhattatreya | AI Engineer",
-    "description": "Portfolio of Yalla Dhattatreya, AI Engineer.",
-    "url": "",
+    "description": "Yalla Dhattatreya, AI Engineer and Electronics and Communication Engineering graduate. Explore projects in Python, computer vision, and embedded systems.",
+    "url": "https://yvenkataramamanikanta09-ux.github.io/websiteyalla/",
     "language": "en",
     "themeColor": "#c63318",
     "defaultTheme": "system"
@@ -11,24 +11,28 @@
   "profile": {
     "name": "Yalla Dhattatreya",
     "headline": "AI Engineer",
-    "introduction": "This is sample content. Replace it with a concise introduction in content/portfolio.json.",
-    "biography": "Describe the work you do, the problems you enjoy solving, and what makes your approach distinctive.",
-    "location": "Your location",
+    "introduction": "I build Python applications and real-time solutions across computer vision, web development, and embedded systems.",
+    "biography": "I'm an Electronics and Communication Engineering graduate with a strong foundation in software development and problem-solving. My hands-on work spans Python applications, real-time OpenCV solutions, web technologies, and embedded systems. I bring knowledge of object-oriented programming, data structures, algorithms, debugging, REST APIs, and backend development, alongside familiarity with AWS services, Git, and database integration.",
+    "location": "Amalapuram, India",
     "availability": "Open to relevant opportunities",
-    "photo": "assets/images/profile-placeholder.svg",
-    "photoAlt": "Sample profile placeholder illustration"
+    "photo": "",
+    "photoAlt": "",
+    "languages": ["English", "Telugu", "Hindi"],
+    "interests": ["Video editing", "Playing sports", "Exploring technology", "Coding practice"]
   },
   "contact": {
     "email": "",
     "links": [
       { "id": "github", "label": "GitHub", "url": "", "visible": false },
-      { "id": "linkedin", "label": "LinkedIn", "url": "", "visible": false }
+      { "id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/yalla-dhattatreya-9174a0293", "visible": true }
     ]
   },
   "resume": { "file": "", "label": "Résumé", "visible": false },
   "labels": {
     "navLabel": "Primary navigation",
     "about": "About",
+    "languages": "Languages",
+    "interests": "Beyond work",
     "skills": "Skills",
     "experience": "Experience",
     "education": "Education",
@@ -53,12 +57,18 @@
     "contact": true
   },
   "skills": [
-    { "id": "frontend", "category": "Frontend", "items": ["HTML", "CSS", "JavaScript"], "order": 1, "visible": true },
-    { "id": "workflow", "category": "Workflow", "items": ["Git", "Accessibility", "Responsive design"], "order": 2, "visible": true }
+    { "id": "programming", "category": "Programming", "items": ["Python", "C", "SQL"], "order": 1, "visible": true },
+    { "id": "computer-vision", "category": "Computer Vision", "items": ["OpenCV", "Image processing", "Machine learning", "Real-time gesture recognition"], "order": 2, "visible": true },
+    { "id": "web-development", "category": "Web Development", "items": ["HTML", "CSS", "JavaScript", "REST APIs"], "order": 3, "visible": true },
+    { "id": "cloud", "category": "Cloud", "items": ["AWS EC2", "AWS Lambda", "AWS VPC", "AWS SQS"], "order": 4, "visible": true },
+    { "id": "development-tools", "category": "Development Tools", "items": ["Visual Studio Code", "PyCharm", "Jupyter Notebook", "Git"], "order": 5, "visible": true },
+    { "id": "embedded-systems", "category": "Embedded Systems", "items": ["Arduino", "Embedded C", "Ultrasonic sensors", "Sensor interfacing"], "order": 6, "visible": true }
   ],
   "experience": [],
   "education": [
-    { "id": "sample-education", "institution": "Sample institution", "qualification": "Replace with your education", "startDate": "", "endDate": "", "details": "Sample content — delete or replace before publishing.", "order": 1, "visible": true }
+    { "id": "btech-ece", "institution": "Srinivasa Institute of Engineering and Technology, Amalapuram", "qualification": "B.Tech in Electronics and Communication Engineering", "startDate": "2022", "endDate": "2026", "details": "", "order": 1, "visible": true },
+    { "id": "intermediate", "institution": "Trimula Junior College, Visakhapatnam", "qualification": "Intermediate", "startDate": "2020", "endDate": "2022", "details": "", "order": 2, "visible": true },
+    { "id": "secondary-school", "institution": "Trimula High School, Visakhapatnam", "qualification": "Secondary School", "startDate": "2019", "endDate": "2020", "details": "", "order": 3, "visible": true }
   ],
   "projects": [
     {
@@ -108,5 +118,10 @@
       "visible": true
     }
   ],
-  "certifications": []
+  "certifications": [
+    { "id": "aws-cloud-practitioner-essentials", "title": "AWS Cloud Practitioner Essentials", "issuer": "", "issueDate": "", "category": "Cloud", "skills": [], "certificateFile": "", "verificationUrl": "", "order": 1, "visible": true },
+    { "id": "python-programming", "title": "Python Programming", "issuer": "", "issueDate": "", "category": "Programming", "skills": [], "certificateFile": "", "verificationUrl": "", "order": 2, "visible": true },
+    { "id": "embedded-systems-fundamentals", "title": "Embedded Systems Fundamentals", "issuer": "", "issueDate": "", "category": "Embedded Systems", "skills": [], "certificateFile": "", "verificationUrl": "", "order": 3, "visible": true },
+    { "id": "web-development-basics", "title": "Web Development Basics", "issuer": "", "issueDate": "", "category": "Web Development", "skills": [], "certificateFile": "", "verificationUrl": "", "order": 4, "visible": true }
+  ]
 }

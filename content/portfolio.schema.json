@@ -5,7 +5,15 @@
   "required": ["site", "profile", "contact", "resume", "labels", "sectionOrder", "sectionVisibility", "skills", "education", "experience", "projects", "certifications"],
   "properties": {
     "site": { "type": "object", "required": ["title", "description", "language", "themeColor"], "additionalProperties": true },
-    "profile": { "type": "object", "required": ["name", "headline", "introduction", "biography"], "additionalProperties": true },
+    "profile": {
+      "type": "object",
+      "required": ["name", "headline", "introduction", "biography"],
+      "properties": {
+        "languages": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "interests": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      },
+      "additionalProperties": true
+    },
     "contact": { "type": "object", "required": ["email", "links"], "additionalProperties": true },
     "resume": { "type": "object", "required": ["file", "label", "visible"], "additionalProperties": true },
     "labels": { "type": "object" },
