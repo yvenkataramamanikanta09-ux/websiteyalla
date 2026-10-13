@@ -33,7 +33,7 @@ button, .button { cursor: pointer; }
 
 .hero {
   display: grid; place-items: center; min-height: min(830px, calc(100svh - 70px));
-  padding: clamp(6rem, 11vw, 10rem) 1.5rem; background: #c63318; color: #fff; text-align: center;
+  padding: clamp(4rem, 7vw, 7rem) 1.5rem; background: #c63318; color: #fff; text-align: center;
 }
 .hero-inner { width: min(100%, 850px); }
 .hero-kicker { display: inline-block; margin: 0 0 1.5rem; border: 1px solid #ffffff80; border-radius: 999px; padding: .35rem .95rem; font-size: .78rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
