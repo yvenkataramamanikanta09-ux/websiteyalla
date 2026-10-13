@@ -1,11 +1,11 @@
 # JSON-driven personal portfolio
 
-A lightweight, accessible portfolio built with HTML, CSS, and JavaScript. **All editable portfolio content lives in [`content/portfolio.json`](content/portfolio.json).** The included profile, education, and project are clearly labeled samples—not real credentials.
+A lightweight, accessible portfolio built with HTML, CSS, and JavaScript. **All editable portfolio content lives in [`content/portfolio.json`](content/portfolio.json).** The project entries are based on the supplied résumé; the profile and education still contain clearly labeled sample text.
 
 ## First-time setup
 
 1. Install Node.js 20 or newer.
-2. Replace every sample value in `content/portfolio.json` with approved public information.
+2. Review the project descriptions and replace the remaining sample profile and education values in `content/portfolio.json` with approved public information.
 3. Put public files in the matching folders:
    - images: `assets/images/`
    - résumés: `assets/documents/resumes/`
