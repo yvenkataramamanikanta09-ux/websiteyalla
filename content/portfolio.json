@@ -63,7 +63,7 @@
   },
   "skills": [
     { "id": "programming", "category": "Programming", "items": ["Python", "C", "SQL"], "order": 1, "visible": true },
-    { "id": "computer-vision", "category": "Computer Vision", "items": ["OpenCV", "Image processing", "Machine learning", "Real-time gesture recognition"], "order": 2, "visible": true },
+    { "id": "computer-vision", "category": "AI & Computer Vision", "items": ["OpenCV", "Image processing", "Machine learning", "Real-time gesture recognition", "Prompt engineering"], "order": 2, "visible": true },
     { "id": "web-development", "category": "Web Development", "items": ["HTML", "CSS", "JavaScript", "REST APIs"], "order": 3, "visible": true },
     { "id": "cloud", "category": "Cloud", "items": ["AWS EC2", "AWS Lambda", "AWS VPC", "AWS SQS"], "order": 4, "visible": true },
     { "id": "development-tools", "category": "Development Tools", "items": ["Visual Studio Code", "PyCharm", "Jupyter Notebook", "Git"], "order": 5, "visible": true },

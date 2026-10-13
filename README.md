@@ -4,6 +4,8 @@ A lightweight, accessible portfolio built with HTML, CSS, and JavaScript. **All 
 
 The owner-approved LinkedIn, Instagram, GitHub, HackerRank, and LeetCode profiles are published as contact links. The email address, phone number, postal code, and original résumé PDF are not included in the public site. Certificate issuers, dates, and verification links remain unspecified because they were not provided.
 
+The Prompt engineering skill is supported by the supplied Codecademy Learn Prompt Engineering course-completion certificate. That PDF is not published with the site.
+
 The [Sign Language Communication System source](projects/sign-language-communication-system/) contains reviewed copies of the two non-empty Python scripts, dependency names, and setup notes. Datasets, model weights, and IDE files are excluded. The portfolio links directly to this folder on GitHub; the Python application is not run by the static website.
 
 ## First-time setup
