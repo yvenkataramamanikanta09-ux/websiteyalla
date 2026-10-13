@@ -27,8 +27,11 @@
     return el('section', { id: 'top', className: 'hero' }, [
       el('div', { className: 'hero-inner' }, [
         p.availability ? el('p', { className: 'hero-kicker', text: p.availability }) : null,
-        el('h1', {}, [el('span', { text: "Hi, I'm" }), el('strong', { text: p.name })]),
-        el('p', { className: 'headline', text: p.headline }),
+        el('h1', {}, [el('span', { text: "Hi, I'm " }), el('strong', { text: p.name })]),
+        el('p', { className: 'headline' }, [
+          data.labels.heroRolePrefix ? el('span', { text: `${data.labels.heroRolePrefix} ` }) : null,
+          el('strong', { text: p.headline })
+        ]),
         el('p', { className: 'hero-script', text: 'Welcome to my portfolio.' }),
         el('p', { className: 'hero-intro', text: p.introduction }),
         p.photo && !p.photo.includes('placeholder') ? el('img', { className: 'hero-portrait', src: p.photo, alt: p.photoAlt || '', width: '118', height: '118' }) : null,

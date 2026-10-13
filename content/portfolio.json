@@ -5,7 +5,7 @@
     "description": "Yalla Dhattatreya, AI Engineer and Electronics and Communication Engineering graduate. Explore projects in Python, computer vision, and embedded systems.",
     "url": "https://yvenkataramamanikanta09-ux.github.io/websiteyalla/",
     "language": "en",
-    "themeColor": "#c63318",
+    "themeColor": "#c43514",
     "defaultTheme": "system"
   },
   "profile": {
@@ -33,6 +33,7 @@
   "resume": { "file": "", "label": "Résumé", "visible": false },
   "labels": {
     "navLabel": "Primary navigation",
+    "heroRolePrefix": "I’m an",
     "about": "About",
     "languages": "Languages",
     "interests": "Beyond work",
