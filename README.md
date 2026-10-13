@@ -1,8 +1,10 @@
 # JSON-driven personal portfolio
 
-A lightweight, accessible portfolio built with HTML, CSS, and JavaScript. **All editable portfolio content lives in [`content/portfolio.json`](content/portfolio.json).** The profile, education, skills, projects, certifications, languages, and interests are based on the supplied résumé. The name and AI Engineer headline follow the owner's requested wording.
+A lightweight, accessible portfolio built with HTML, CSS, and JavaScript. **All editable portfolio content lives in [`content/portfolio.json`](content/portfolio.json).** Education, skills, projects, certifications, languages, and interests are based on the supplied résumé. The name, headline, About text, Hyderabad location, and social links follow the owner's requested updates.
 
-Only LinkedIn is published as a contact channel. The email address, phone number, postal code, and original résumé PDF are not included in the public site. Certificate issuers, dates, and verification links remain unspecified because they were not provided.
+The owner-approved LinkedIn, Instagram, GitHub, HackerRank, and LeetCode profiles are published as contact links. The email address, phone number, postal code, and original résumé PDF are not included in the public site. Certificate issuers, dates, and verification links remain unspecified because they were not provided.
+
+The [Sign Language Communication System source](projects/sign-language-communication-system/) contains reviewed copies of the two non-empty Python scripts, dependency names, and setup notes. Datasets, model weights, and IDE files are excluded. The portfolio links directly to this folder on GitHub; the Python application is not run by the static website.
 
 ## First-time setup
 

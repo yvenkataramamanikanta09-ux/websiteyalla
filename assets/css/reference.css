@@ -86,7 +86,7 @@ button, .button { cursor: pointer; }
 #projects .card { display: flex; flex-direction: column; text-align: center; }
 #projects .card p { flex: 1; color: var(--muted); }
 #projects .card .tags { justify-content: center; }
-#projects .card button { align-self: center; margin-top: 1.4rem; }
+#projects .card .card-actions { justify-content: center; align-items: center; margin-top: 1.4rem; }
 .filters { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
 .filters label { display: grid; gap: .25rem; font-size: .85rem; font-weight: 750; }
 .filters input, .filters select { min-width: 210px; min-height: 45px; padding: .55rem .8rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); }

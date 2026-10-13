@@ -1,0 +1,10 @@
+.venv/
+venv/
+.idea/
+__pycache__/
+*.pyc
+dataset/
+*.h5
+*.keras
+.env
+.env.*

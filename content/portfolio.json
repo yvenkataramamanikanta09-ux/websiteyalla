@@ -12,8 +12,8 @@
     "name": "Yalla Dhattatreya",
     "headline": "AI Engineer",
     "introduction": "I build Python applications and real-time solutions across computer vision, web development, and embedded systems.",
-    "biography": "I'm an Electronics and Communication Engineering graduate with a strong foundation in software development and problem-solving. My hands-on work spans Python applications, real-time OpenCV solutions, web technologies, and embedded systems. I bring knowledge of object-oriented programming, data structures, algorithms, debugging, REST APIs, and backend development, alongside familiarity with AWS services, Git, and database integration.",
-    "location": "Amalapuram, India",
+    "biography": "I’m an aspiring AI Engineer and Python Developer with a B.Tech in Electronics and Communication Engineering from Srinivasa Institute of Engineering and Technology. I have hands-on project experience in Python, SQL, machine learning, and computer vision through projects such as a Sign Language Communication System and Brain Tumor Detection. I’m expanding my skills in backend development, AWS, and AI/LLM applications, with a focus on solving practical problems. As a recent graduate, I’m seeking an entry-level opportunity to contribute to meaningful projects and grow in AI and software development.",
+    "location": "Hyderabad, India",
     "availability": "Open to relevant opportunities",
     "photo": "",
     "photoAlt": "",
@@ -23,8 +23,11 @@
   "contact": {
     "email": "",
     "links": [
-      { "id": "github", "label": "GitHub", "url": "", "visible": false },
-      { "id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/yalla-dhattatreya-9174a0293", "visible": true }
+      { "id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/yalla-dhattatreya-9174a0293", "order": 1, "visible": true },
+      { "id": "instagram", "label": "Instagram", "url": "https://www.instagram.com/yalladhattatreya/", "order": 2, "visible": true },
+      { "id": "github", "label": "GitHub", "url": "https://github.com/yvenkataramamanikanta09-ux", "order": 3, "visible": true },
+      { "id": "hackerrank", "label": "HackerRank", "url": "https://www.hackerrank.com/profile/yvenkataramaman1", "order": 4, "visible": true },
+      { "id": "leetcode", "label": "LeetCode", "url": "https://leetcode.com/u/dhattatreyayalla_2004/", "order": 5, "visible": true }
     ]
   },
   "resume": { "file": "", "label": "Résumé", "visible": false },
@@ -42,6 +45,7 @@
     "searchProjects": "Search projects",
     "allCategories": "All categories",
     "viewDetails": "View details",
+    "viewCode": "View code",
     "view": "View",
     "download": "Download",
     "verify": "Verify credential"
@@ -102,13 +106,13 @@
       "problem": "Support communication between people who sign and people who do not sign.",
       "approach": "Used Python, OpenCV, image processing, and machine-learning techniques to recognize gestures in real time.",
       "features": ["Real-time gesture recognition", "Text or speech output", "Assistive communication"],
-      "technologies": ["Python", "OpenCV", "Image Processing", "Machine Learning"],
+      "technologies": ["Python", "OpenCV", "TensorFlow", "Keras", "NumPy", "pyttsx3"],
       "contribution": "Developed the gesture recognition system and its text or speech output flow.",
       "outcome": "Converted recognized gestures into text or speech to support communication.",
       "thumbnail": "",
       "thumbnailAlt": "",
       "screenshots": [],
-      "repositoryUrl": "",
+      "repositoryUrl": "https://github.com/yvenkataramamanikanta09-ux/websiteyalla/tree/main/projects/sign-language-communication-system",
       "demoUrl": "",
       "reportFile": "",
       "category": "Computer Vision",

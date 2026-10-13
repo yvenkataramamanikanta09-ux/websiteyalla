@@ -61,7 +61,7 @@
     const dl = el('dl', { className: 'detail-list' });
     [['Problem', project.problem], ['Approach', project.approach], ['My contribution', project.contribution], ['Outcome / limitations', project.outcome], ['Features', project.features?.join(' · ')], ['Technology', project.technologies?.join(' · ')]].forEach(([k,v]) => { if(v) dl.append(el('dt',{text:k}),el('dd',{text:v})); });
     const screenshots=(project.screenshots||[]).filter(s=>s.src).map(s=>el('figure',{},[el('img',{src:s.src,alt:s.alt||'',loading:'lazy'}),s.caption?el('figcaption',{text:s.caption}):null]));
-    const actions = [link('Repository', project.repositoryUrl), link('Live demo', project.demoUrl), link('View report', project.reportFile), link('Download report', project.reportFile, 'button secondary', true)].filter(Boolean);
+    const actions = [link(labels.viewCode || 'View code', project.repositoryUrl), link('Live demo', project.demoUrl), link('View report', project.reportFile), link('Download report', project.reportFile, 'button secondary', true)].filter(Boolean);
     content.append(dl);
     if (screenshots.length) content.append(el('div', { className: 'grid' }, screenshots));
     if (actions.length) content.append(el('div', { className: 'card-actions' }, actions));
@@ -73,7 +73,20 @@
     const allCategories = el('option', { text: data.labels.allCategories }); allCategories.value = '';
     const select = el('select', { 'aria-label': 'Filter projects by category' }, [allCategories, ...categories.map(c => el('option', { value: c, text: c }))]);
     const grid = el('div', { className: 'grid' }); const empty = el('p', { className: 'empty', text: 'No projects match the current filters.' });
-    const draw = () => { const q=search.value.trim().toLowerCase(), category=select.value; const matches=projects.filter(p => (!category||p.category===category) && (!q||[p.title,p.summary,p.category,...(p.tags||[]),...(p.technologies||[])].join(' ').toLowerCase().includes(q))); grid.replaceChildren(...matches.map(p => { const button=el('button',{type:'button',text:data.labels.viewDetails}); button.addEventListener('click',()=>showProject(p,data.labels)); return el('article',{className:'card'},[p.thumbnail?el('img',{src:p.thumbnail,alt:p.thumbnailAlt||'',loading:'lazy',width:'1200',height:'675'}):null,el('h3',{text:p.title}),el('p',{text:p.summary}),tags(p.tags||[]),button]); })); empty.hidden=matches.length>0; };
+    const draw = () => {
+      const q = search.value.trim().toLowerCase(), category = select.value;
+      const matches = projects.filter(p => (!category || p.category === category) && (!q || [p.title, p.summary, p.category, ...(p.tags || []), ...(p.technologies || [])].join(' ').toLowerCase().includes(q)));
+      grid.replaceChildren(...matches.map(p => {
+        const button = el('button', { type: 'button', text: data.labels.viewDetails });
+        button.addEventListener('click', () => showProject(p, data.labels));
+        return el('article', { className: 'card' }, [
+          p.thumbnail ? el('img', { src: p.thumbnail, alt: p.thumbnailAlt || '', loading: 'lazy', width: '1200', height: '675' }) : null,
+          el('h3', { text: p.title }), el('p', { text: p.summary }), tags(p.tags || []),
+          el('div', { className: 'card-actions' }, [button, link(data.labels.viewCode || 'View code', p.repositoryUrl, 'button secondary')])
+        ]);
+      }));
+      empty.hidden = matches.length > 0;
+    };
     search.addEventListener('input', draw); select.addEventListener('change', draw); draw();
     return section('projects', data.labels.projects, [el('div',{className:'filters'},[el('label',{},[el('span',{text:data.labels.searchProjects}),search]),el('label',{},[el('span',{text:'Category'}),select])]),grid,empty]);
   }
