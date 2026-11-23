@@ -121,6 +121,45 @@
       "featured": true,
       "order": 2,
       "visible": true
+    },
+    {
+      "id": "pdf-watermark-remover",
+      "title": "PDF Watermark Remover",
+      "summary": "An offline Android app that removes supported watermarks from PDFs and saves a cleaned copy on your phone.",
+      "description": "A Flutter interface guides you through choosing a PDF, previewing its pages, and saving the result. The phone runs the Python processing engine locally.",
+      "problem": "Remove recurring watermarks from a document while keeping the PDF private and preserving the surrounding content.",
+      "approach": "Connected Flutter to an embedded Python engine through Kotlin and Chaquopy. The engine checks page renderings before and after removal for changes outside the target area.",
+      "features": [
+        "Automatically remove PDF watermark annotations and supported Acrobat watermark layers",
+        "Mark an area on page one to remove fully enclosed objects on that page or across all pages",
+        "Save a separate copy and preserve the original PDF"
+      ],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Kotlin",
+        "Python",
+        "Chaquopy",
+        "pypdf",
+        "PDFium"
+      ],
+      "contribution": "Built the Android workflow and integrated the on-device PDF processing engine.",
+      "outcome": "Users can clean supported PDFs offline and choose where to save the result.",
+      "thumbnail": "",
+      "thumbnailAlt": "",
+      "screenshots": [],
+      "repositoryUrl": "https://github.com/yvenkataramamanikanta09-ux/PDF-watermark-remover",
+      "demoUrl": "",
+      "reportFile": "",
+      "category": "Mobile Development",
+      "tags": [
+        "Android",
+        "PDF",
+        "Offline"
+      ],
+      "featured": true,
+      "order": 3,
+      "visible": true
     }
   ],
   "certifications": [
