@@ -2,7 +2,7 @@
   "$schema": "./portfolio.schema.json",
   "site": {
     "title": "Yalla Dhattatreya | AI Engineer",
-    "description": "Yalla Dhattatreya, AI Engineer and Electronics and Communication Engineering graduate. Explore projects in Python, computer vision, and embedded systems.",
+    "description": "Explore Yalla Dhattatreya’s work in computer vision, embedded systems, and Android development, including a Flutter app for offline PDF watermark removal.",
     "url": "https://yvenkataramamanikanta09-ux.github.io/websiteyalla/",
     "language": "en",
     "themeColor": "#c43514",
@@ -11,8 +11,8 @@
   "profile": {
     "name": "Yalla Dhattatreya",
     "headline": "AI Engineer",
-    "introduction": "I build Python applications and real-time solutions across computer vision, web development, and embedded systems.",
-    "biography": "I’m an aspiring AI Engineer and Python Developer with a B.Tech in Electronics and Communication Engineering from Srinivasa Institute of Engineering and Technology. I have hands-on project experience in Python, SQL, machine learning, and computer vision through projects such as a Sign Language Communication System and Brain Tumor Detection. I’m expanding my skills in backend development, AWS, and AI/LLM applications, with a focus on solving practical problems. As a recent graduate, I’m seeking an entry-level opportunity to contribute to meaningful projects and grow in AI and software development.",
+    "introduction": "I build with Python across computer vision, web development, and embedded systems. I also use Flutter to bring Python tools to Android.",
+    "biography": "I’m an aspiring AI Engineer and Python Developer with a B.Tech in Electronics and Communication Engineering from Srinivasa Institute of Engineering and Technology. I have hands-on project experience in Python, SQL, machine learning, and computer vision through projects such as a Sign Language Communication System and Brain Tumor Detection. I built PDF Watermark Remover by connecting a Flutter interface to a Python engine that processes documents directly on an Android phone. I’m expanding my skills in backend development, AWS, and AI/LLM applications, with a focus on solving practical problems. As a recent graduate, I’m seeking an entry-level opportunity to contribute to meaningful projects and grow in AI and software development.",
     "location": "Hyderabad, India",
     "availability": "Open to relevant opportunities",
     "photo": "",
@@ -62,12 +62,93 @@
     "contact": true
   },
   "skills": [
-    { "id": "programming", "category": "Programming", "items": ["Python", "C", "SQL"], "order": 1, "visible": true },
-    { "id": "computer-vision", "category": "AI & Computer Vision", "items": ["OpenCV", "Image processing", "Machine learning", "Real-time gesture recognition", "Prompt engineering"], "order": 2, "visible": true },
-    { "id": "web-development", "category": "Web Development", "items": ["HTML", "CSS", "JavaScript", "REST APIs"], "order": 3, "visible": true },
-    { "id": "cloud", "category": "Cloud", "items": ["AWS EC2", "AWS Lambda", "AWS VPC", "AWS SQS"], "order": 4, "visible": true },
-    { "id": "development-tools", "category": "Development Tools", "items": ["Visual Studio Code", "PyCharm", "Jupyter Notebook", "Git"], "order": 5, "visible": true },
-    { "id": "embedded-systems", "category": "Embedded Systems", "items": ["Arduino", "Embedded C", "Ultrasonic sensors", "Sensor interfacing"], "order": 6, "visible": true }
+    {
+      "id": "programming",
+      "category": "Programming",
+      "items": [
+        "Python",
+        "C",
+        "SQL",
+        "Dart",
+        "Kotlin"
+      ],
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "computer-vision",
+      "category": "AI & Computer Vision",
+      "items": [
+        "OpenCV",
+        "Image processing",
+        "Machine learning",
+        "Real-time gesture recognition",
+        "Prompt engineering"
+      ],
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "web-development",
+      "category": "Web Development",
+      "items": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "REST APIs"
+      ],
+      "order": 3,
+      "visible": true
+    },
+    {
+      "id": "cloud",
+      "category": "Cloud",
+      "items": [
+        "AWS EC2",
+        "AWS Lambda",
+        "AWS VPC",
+        "AWS SQS"
+      ],
+      "order": 4,
+      "visible": true
+    },
+    {
+      "id": "development-tools",
+      "category": "Development Tools",
+      "items": [
+        "Visual Studio Code",
+        "PyCharm",
+        "Jupyter Notebook",
+        "Git"
+      ],
+      "order": 5,
+      "visible": true
+    },
+    {
+      "id": "embedded-systems",
+      "category": "Embedded Systems",
+      "items": [
+        "Arduino",
+        "Embedded C",
+        "Ultrasonic sensors",
+        "Sensor interfacing"
+      ],
+      "order": 6,
+      "visible": true
+    },
+    {
+      "id": "mobile-development",
+      "category": "Mobile & PDF Development",
+      "items": [
+        "Flutter",
+        "Android development",
+        "Chaquopy (Python on Android)",
+        "PDF manipulation with pypdf",
+        "PDF rendering with PDFium"
+      ],
+      "order": 7,
+      "visible": true
+    }
   ],
   "experience": [],
   "education": [
